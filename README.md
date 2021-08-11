@@ -23,5 +23,10 @@ Downsides:
 - no return type by default - adding one would require either creating a generator or writing boilerplate code
 - no control over execution order, since listeners are added in OnEnable() methods
 
-**Overall** i think it's pretty much useful pattern, but it's definetely not a catch-all. Sometimes it might fit game logic or be used as a synchronization tool, but there are for sure times when regular UnityEvents could fit better or at least not worse (e.g. UI). 
+**Overall** i think it's pretty much useful pattern, but it's definetely not a catch-all. Sometimes it might fit game logic or be used as a synchronization tool, but there are for sure times when regular UnityEvents could fit better or at least not worse (e.g. UI).
+
+### ScriptableObject runtime sets (collections)
+Another great example of utilizing ScriptableObjects capabilities. Basically this a collection turned into a scriptable object. What for?
+
+It literally destroys one of the singleton purposes - storing global high-level collection of some GameObjects. It might be enemies, minimap icons, weapons - whatever. By wrapping this collection in a scriptable object we are able to pass it to any script interested in tracking (e.g. audio manager, enemies counter etc).
 
