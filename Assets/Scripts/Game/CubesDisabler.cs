@@ -1,19 +1,23 @@
+using SOPatterns.RuntimeSets;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class CubesDisabler : MonoBehaviour
+namespace SOPatterns.Game
 {
-    [SerializeField] private CubesRuntimeSet cubes;
-
-    public void DisableRandomCube()
+    public class CubesDisabler : MonoBehaviour
     {
-        int index = Random.Range(0, cubes.Items.Count);
-        cubes.Items[index].gameObject.SetActive(false);
-    }
+        [SerializeField] private CubesRuntimeSet cubes;
 
-    public void DisableAllCubes()
-    {
-        for (int i = cubes.Items.Count - 1; i >= 0; i--)
-            cubes.Items[i].gameObject.SetActive(false);
+        public void DisableRandomCube()
+        {
+            int index = Random.Range(0, cubes.Items.Count);
+            cubes.Items[index].gameObject.SetActive(false);
+        }
+
+        public void DisableAllCubes()
+        {
+            for (int i = cubes.Items.Count - 1; i >= 0; i--)
+                cubes.Items[i].gameObject.SetActive(false);
+        }
     }
 }

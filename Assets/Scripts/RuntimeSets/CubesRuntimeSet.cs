@@ -1,5 +1,9 @@
+using SOPatterns.Game;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class CubesRuntimeSet : RuntimeSet<CubeController>
-{ }
+namespace SOPatterns.RuntimeSets
+{
+    [CreateAssetMenu]
+    public class CubesRuntimeSet : RuntimeSet<CubeController>
+    { }
+}

@@ -1,23 +1,26 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameEventListener : MonoBehaviour
+namespace SOPatterns.Events
 {
-    [SerializeField] private GameEvent Event;
-    [SerializeField] private UnityEvent Response;
-
-    private void OnEnable()
+    public class GameEventListener : MonoBehaviour
     {
-        Event.RegisterListener(this);
-    }
+        [SerializeField] private GameEvent Event;
+        [SerializeField] private UnityEvent Response;
 
-    private void OnDisable()
-    {
-        Event.UnregisterListener(this);
-    }
+        private void OnEnable()
+        {
+            Event.RegisterListener(this);
+        }
 
-    public void OnEventRaised()
-    {
-        Response.Invoke();
+        private void OnDisable()
+        {
+            Event.UnregisterListener(this);
+        }
+
+        public void OnEventRaised()
+        {
+            Response.Invoke();
+        }
     }
 }

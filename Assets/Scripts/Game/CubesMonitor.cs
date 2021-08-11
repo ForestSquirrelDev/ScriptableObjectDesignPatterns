@@ -1,27 +1,31 @@
+using SOPatterns.RuntimeSets;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CubesMonitor : MonoBehaviour
+namespace SOPatterns.Game
 {
-    [SerializeField] private CubesRuntimeSet cubes;
-    [SerializeField] private Text text;
-
-    private int previousCount = -1;
-
-    private void Update()
+    public class CubesMonitor : MonoBehaviour
     {
-        UpdateText();
-    }
+        [SerializeField] private CubesRuntimeSet cubes;
+        [SerializeField] private Text text;
 
-    /// <summary>
-    /// Comparing previous items count to current list state to avoid excessive text updates every frame.
-    /// </summary>
-    private void UpdateText()
-    {
-        if (previousCount != cubes.Items.Count)
+        private int previousCount = -1;
+
+        private void Update()
         {
-            text.text = "There are " + cubes.Items.Count.ToString() + " cube(s)";
-            previousCount = cubes.Items.Count;
+            UpdateText();
+        }
+
+        /// <summary>
+        /// Comparing previous items count to current list state to avoid excessive text updates every frame.
+        /// </summary>
+        private void UpdateText()
+        {
+            if (previousCount != cubes.Items.Count)
+            {
+                text.text = "There are " + cubes.Items.Count.ToString() + " cube(s)";
+                previousCount = cubes.Items.Count;
+            }
         }
     }
 }

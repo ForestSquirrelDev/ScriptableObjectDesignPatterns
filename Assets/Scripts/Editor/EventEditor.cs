@@ -1,18 +1,22 @@
-﻿using UnityEditor;
+﻿using SOPatterns.Events;
+using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(GameEvent), editorForChildClasses: true)]
-public class EventEditor : Editor
+namespace SOPatterns.EditorCustomization
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(GameEvent), editorForChildClasses: true)]
+    public class EventEditor : Editor
     {
-        base.OnInspectorGUI();
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
 
-        GUI.enabled = Application.isPlaying;
+            GUI.enabled = Application.isPlaying;
 
-        GameEvent e = target as GameEvent;
+            GameEvent e = target as GameEvent;
 
-        if (GUILayout.Button("Raise"))
-            e.Raise();
+            if (GUILayout.Button("Raise"))
+                e.Raise();
+        }
     }
 }
