@@ -1,7 +1,7 @@
-# ScriptableObject design patterns
-Continuing my Unite Austin 2017 walkthrough. This time we've been introduced to couple amazing ScriptableObject disign patterns.
+# Game architecture with ScriptableObjects
+Continuing my Unite Austin 2017 walkthrough. This time we've been introduced a couple amazing ScriptableObject design patterns.
 
-### First one is ScriptableObject events pattern
+### ScriptableObject events pattern
 How it works:
  
 1. We create script "GameEvent" derived from ScriptableObject that has a list of listeners and following methods: add, remove listener and raise the event.
@@ -15,7 +15,7 @@ This is basically an extended UnityEvent with additonal layer - "bus" scriptable
 
 Benefits:
 - less rigid and much more obvious connections between game components in comparsion to UnityEvents
-- reusable both in the project or outside of it
+- reusable both in the project and outside of it
 - highly customizable: possible to add developer description, some additional actions on event raise etc
 - easier to track bugs
 
@@ -29,4 +29,3 @@ Downsides:
 Another great example of utilizing ScriptableObjects capabilities. Basically this is a collection turned into a scriptable object. What for?
 
 It literally destroys one of the singleton purposes - storing global high-level collections of some GameObjects. It might be enemies, minimap icons, weapons - whatever. By wrapping this collection in a scriptable object we are able to pass it to any script interested in tracking (e.g. audio manager, enemy counter etc).
-
