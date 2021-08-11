@@ -1,5 +1,7 @@
 # ScriptableObject events pattern
-Continuing my Unite Austin 2017 walkthrough. This time we've been introduced to ScriptableObject events pattern. How it works:
+Continuing my Unite Austin 2017 walkthrough. This time we've been introduced to couple amazing ScriptableObject disign patterns.
+
+First one is ScriptableObject events pattern. How it works:
  
 1. We create script "GameEvent" derived from ScriptableObject that has a list of listeners and following methods: add, remove listener and raise the event.
 2. Whatever GameObject needs to notify observers, has a UnityEvent with "GameEvent" scriptable object dragged in.
@@ -20,6 +22,5 @@ Downsides:
 - no return type by default - adding one would require either creating a generator or writing boilerplate code
 - no control over execution order, since listeners are added in OnEnable() methods
 
-### Conclusion
-Overall i think it's pretty much useful pattern, but it's definetely not a catch-all. Sometimes it might fit game logic or be used as a synchronization tool, but there are for sure times when regular UnityEvents could fit better or at least not worse (e.g. UI). 
+**Overall** i think it's pretty much useful pattern, but it's definetely not a catch-all. Sometimes it might fit game logic or be used as a synchronization tool, but there are for sure times when regular UnityEvents could fit better or at least not worse (e.g. UI). 
 
