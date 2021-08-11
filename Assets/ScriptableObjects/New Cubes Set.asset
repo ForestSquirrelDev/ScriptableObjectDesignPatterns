@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa36ad68373a4244f85a2ebcb3e89bb9, type: 3}
-  m_Name: CubeFellDown
+  m_Script: {fileID: 11500000, guid: fd4c89a7e28aea244a7bf94195722fe7, type: 3}
+  m_Name: New Cubes Set
   m_EditorClassIdentifier: 
-  DeveloperDesctription: Event raises when cube touches the ground.
