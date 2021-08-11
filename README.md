@@ -28,5 +28,5 @@ Downsides:
 ### ScriptableObject runtime sets (collections)
 Another great example of utilizing ScriptableObjects capabilities. Basically this is a collection turned into a scriptable object. What for?
 
-It literally destroys one of the singleton purposes - storing global high-level collections of some GameObjects. It might be enemies, minimap icons, weapons - whatever. By wrapping this collection in a scriptable object we are able to pass it to any script interested in tracking (e.g. audio manager, enemies counter etc).
+It literally destroys one of the singleton purposes - storing global high-level collections of some GameObjects. It might be enemies, minimap icons, weapons - whatever. By wrapping this collection in a scriptable object we are able to pass it to any script interested in tracking (e.g. audio manager, enemy counter etc).
 
