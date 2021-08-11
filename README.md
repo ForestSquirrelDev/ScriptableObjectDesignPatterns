@@ -1,5 +1,5 @@
 # ScriptableObject events pattern
-Continuing my Unite Austin 2017 walkthrough. This time we've been introduced a ScriptableObject events pattern. How it works:
+Continuing my Unite Austin 2017 walkthrough. This time we've been introduced to ScriptableObject events pattern. How it works:
  
 1. We create script "GameEvent" derived from ScriptableObject that has a list of listeners and following methods: add, remove listener and raise the event.
 2. Whatever GameObject needs to notify observers, has a UnityEvent with "GameEvent" ScriptableObject dragged in.
