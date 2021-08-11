@@ -2,9 +2,9 @@
 Continuing my Unite Austin 2017 walkthrough. This time we've been introduced to ScriptableObject events pattern. How it works:
  
 1. We create script "GameEvent" derived from ScriptableObject that has a list of listeners and following methods: add, remove listener and raise the event.
-2. Whatever GameObject needs to notify observers, has a UnityEvent with "GameEvent" ScriptableObject dragged in.
-3. Listener GameObjects have a MonoBehaviour script "GameEventListener" with UnityEvent to perform required actions and a reference to "GameEvent" to know when those actions should be done. In OnEnable() method listeners register themselves to the List of type GameEventListener in "GameEvent" instance.
-4. When target event occurs, method Raise() of "GameEvent" instance gets called and all observers are notified. Listeners handle event actions on their own as with the traditional observer pattern.
+2. Whatever GameObject needs to notify observers, has a UnityEvent with "GameEvent" scriptable object dragged in.
+3. Listener GameObjects have a MonoBehaviour script "GameEventListener" with UnityEvent to perform required actions and a reference to "GameEvent" to know when those actions should be done. In OnEnable() listeners register themselves to the List of type GameEventListener in "GameEvent" scriptable object.
+4. When target event occurs, method Raise() of "GameEvent" scriptable object gets called and all observers are notified. Listeners handle event actions on their own as with the traditional observer pattern.
 
 ### My personal thoughts on this one
 
