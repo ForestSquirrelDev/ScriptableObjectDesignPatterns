@@ -14,7 +14,7 @@ How it works:
 This is basically an extended UnityEvent with additonal layer - "bus" scriptable object. To me this looks like a beautiful customizable variation of observer pattern in Unity.
 
 Benefits:
-- less rigid and much more obvious connections between game components
+- less rigid and much more obvious connections between game components in comparsion to UnityEvents
 - reusable both in the project or outside of it
 - highly customizable: possible to add developer description, some additional actions on event raise etc
 - easier to track bugs
