@@ -14,10 +14,9 @@ How it works:
 To me this looks like a beautiful customizable variation of observer pattern in Unity.
 
 Benefits:
-- less rigid connections
+- less rigid and much more obvious connections
 - reusable both in the project or outside of it
 - highly customizable: possible to add developer description, some additional actions on event raise etc
-- more obvious to both programmers and designers
 
 Downsides:
 - no return type by default - adding one would require either creating a generator or writing boilerplate code
