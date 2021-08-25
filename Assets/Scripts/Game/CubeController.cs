@@ -1,4 +1,5 @@
 using SOPatterns.RuntimeSets;
+using SOPatterns.Events;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,6 +9,7 @@ namespace SOPatterns.Game
     {
         [SerializeField] private UnityEvent OnFallOccured;
         [SerializeField] private CubesRuntimeSet cubesRuntimeSet;
+        [SerializeField] private CubesTouchedEvent cubesTouched;
 
         private void OnEnable()
         {
@@ -28,6 +30,7 @@ namespace SOPatterns.Game
         private void OnCollisionEnter2D(Collision2D collision)
         {
             OnFallOccured.Invoke();
+            cubesTouched.RaiseEvent(new CubeTouchedEventData(gameObject, GetComponent<SpriteRenderer>(), GetComponent<BoxCollider2D>()));
         }
     }
 }

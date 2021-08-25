@@ -185,6 +185,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cubesRuntimeSet: {fileID: 11400000, guid: 28194952a7bc10d43a0b96ee2a0a6aa9, type: 2}
+  cubesTouched: {fileID: 11400000, guid: 24c6419a14dfe0444bf0c4aa6bdb7fe6, type: 2}
 --- !u!61 &358196812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -707,6 +708,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cubesRuntimeSet: {fileID: 11400000, guid: 28194952a7bc10d43a0b96ee2a0a6aa9, type: 2}
+  cubesTouched: {fileID: 11400000, guid: 24c6419a14dfe0444bf0c4aa6bdb7fe6, type: 2}
 --- !u!1 &750313342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6616f2c5318cbe49b59edfffe13d640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubesTouched: {fileID: 11400000, guid: 24c6419a14dfe0444bf0c4aa6bdb7fe6, type: 2}
   cubes: {fileID: 11400000, guid: 28194952a7bc10d43a0b96ee2a0a6aa9, type: 2}
   text: {fileID: 563300265}
 --- !u!1 &1193535407
@@ -1606,6 +1609,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cubesRuntimeSet: {fileID: 11400000, guid: 28194952a7bc10d43a0b96ee2a0a6aa9, type: 2}
+  cubesTouched: {fileID: 11400000, guid: 24c6419a14dfe0444bf0c4aa6bdb7fe6, type: 2}
 --- !u!61 &1833413522
 BoxCollider2D:
   m_ObjectHideFlags: 0
