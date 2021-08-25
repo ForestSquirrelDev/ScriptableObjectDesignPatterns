@@ -33,7 +33,7 @@ It literally destroys one of the singleton purposes - storing global high-level 
 ### Asset bases
 >*We heard you like ScriptableObjects. So we put ScriptableObjects in your ScriptableObjects so you can use ScriptableObjects while you use Scriptable objects.*
 
-Idea of this pattern is basikally to create a referencable system derived from SO, which will contain other SOs as references. It can be pretty useful with inventory, achievement systems because we wouldnt need to hard reference those systems in other scripts.
+Idea of this pattern is basically to create a referencable system derived from SO, which will contain other SOs as references. It can be pretty useful with inventory, achievement systems because we wouldnt need to hard reference those systems in other scripts.
 
 ### Scriptable... EventArgs?
 Not really a pattern from Unity Austin 2017, but i find it a must to put it here. This is pretty much close to SO UnityEvents pattern, but it has a few benefits:
